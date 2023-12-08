@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C447444-7F30-40E7-B90A-4CAB343695AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UberStrike.DataCenter.Common</RootNamespace>
+    <AssemblyName>UberStrike.DataCenter.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AccountCompletionResultView.cs" />
+    <Compile Include="Entities\AuthenticateApplicationView.cs" />
+    <Compile Include="Entities\DailyPointsView.cs" />
+    <Compile Include="Entities\EsnsBasicStatisticView.cs" />
+    <Compile Include="Entities\FacebookBasicStatisticView.cs" />
+    <Compile Include="Entities\ItemQuickUseConfigView.cs" />
+    <Compile Include="Entities\LastIpView.cs" />
+    <Compile Include="Entities\LinkedMemberView.cs" />
+    <Compile Include="Entities\LiveFeedView.cs" />
+    <Compile Include="Entities\LoadoutView.cs" />
+    <Compile Include="Entities\MapClusterView.cs" />
+    <Compile Include="Entities\MapInfoView.cs" />
+    <Compile Include="Entities\MapUsageView.cs" />
+    <Compile Include="Entities\MapVersionView.cs" />
+    <Compile Include="Entities\MatchStats.cs" />
+    <Compile Include="Entities\MatchView.cs" />
+    <Compile Include="Entities\PlayerCardView.cs" />
+    <Compile Include="Entities\PlayerLevelCapView.cs" />
+    <Compile Include="Entities\PlayerMatchStats.cs" />
+    <Compile Include="Entities\PlayerPersonalRecordStatisticsView.cs" />
+    <Compile Include="Entities\PlayerStatisticsView.cs" />
+    <Compile Include="Entities\PlayerWeaponStatisticsView.cs" />
+    <Compile Include="Entities\PlayerXPEventView.cs" />
+    <Compile Include="Entities\RankingView.cs" />
+    <Compile Include="Entities\UberstrikeFunctionalConfigView.cs" />
+    <Compile Include="Entities\UberstrikeGearConfigView.cs" />
+    <Compile Include="Entities\UberstrikeItemFunctionalView.cs" />
+    <Compile Include="Entities\UberstrikeItemGearView.cs" />
+    <Compile Include="Entities\UberstrikeItemQuickUseView.cs" />
+    <Compile Include="Entities\UberstrikeItemShopView.cs" />
+    <Compile Include="Entities\UberstrikeItemSpecialView.cs" />
+    <Compile Include="Entities\UberstrikeItemView.cs" />
+    <Compile Include="Entities\UberstrikeItemWeaponModView.cs" />
+    <Compile Include="Entities\UberstrikeItemWeaponView.cs" />
+    <Compile Include="Entities\UberstrikeMemberView.cs" />
+    <Compile Include="Entities\UberstrikeSpecialConfigView.cs" />
+    <Compile Include="Entities\UberstrikeWeaponConfigView.cs" />
+    <Compile Include="Entities\UberstrikeWeaponModConfigView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cmune\Cmune.csproj">
+      <Project>{2d4f62df-005c-4b1c-85f1-3b002b1d7a39}</Project>
+      <Name>Cmune</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UberStrike.Core.Types\UberStrike.Core.Types.csproj">
+      <Project>{49f93537-1c8b-40cd-8d19-6d1a5be3873c}</Project>
+      <Name>UberStrike.Core.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,6 @@
+.vs/
+**/bin/
+**/obj/
+packages/
+AssemblyReferences/*.dll
+.DS_Store

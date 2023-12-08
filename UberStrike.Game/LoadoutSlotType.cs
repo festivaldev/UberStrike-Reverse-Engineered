@@ -1,0 +1,23 @@
+﻿public enum LoadoutSlotType {
+	GearHead,
+	GearFace,
+	GearGloves,
+	GearUpperBody,
+	GearLowerBody,
+	GearBoots,
+	GearHolo,
+	WeaponMelee,
+	WeaponPrimary,
+	WeaponSecondary,
+	WeaponTertiary,
+	QuickUseItem1,
+	QuickUseItem2,
+	QuickUseItem3,
+	FunctionalItem1,
+	FunctionalItem2,
+	FunctionalItem3,
+	Inventory,
+	Shop,
+	Underground,
+	None
+}

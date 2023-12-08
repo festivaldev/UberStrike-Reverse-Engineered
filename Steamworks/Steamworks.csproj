@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1442C331-2AFC-4133-BBC8-B1E5229F838A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Steamworks</RootNamespace>
+    <AssemblyName>Steamworks</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autogen\isteamapplist.cs" />
+    <Compile Include="autogen\isteamapps.cs" />
+    <Compile Include="autogen\isteamclient.cs" />
+    <Compile Include="autogen\isteamcontroller.cs" />
+    <Compile Include="autogen\isteamfriends.cs" />
+    <Compile Include="autogen\isteamgameserver.cs" />
+    <Compile Include="autogen\isteamgameserverhttp.cs" />
+    <Compile Include="autogen\isteamgameserverinventory.cs" />
+    <Compile Include="autogen\isteamgameservernetworking.cs" />
+    <Compile Include="autogen\isteamgameserverstats.cs" />
+    <Compile Include="autogen\isteamgameserverutils.cs" />
+    <Compile Include="autogen\isteamhtmlsurface.cs" />
+    <Compile Include="autogen\isteamhttp.cs" />
+    <Compile Include="autogen\isteaminventory.cs" />
+    <Compile Include="autogen\isteammatchmaking.cs" />
+    <Compile Include="autogen\isteammusic.cs" />
+    <Compile Include="autogen\isteammusicremote.cs" />
+    <Compile Include="autogen\isteamnetworking.cs" />
+    <Compile Include="autogen\isteamremotestorage.cs" />
+    <Compile Include="autogen\isteamscreenshots.cs" />
+    <Compile Include="autogen\isteamugc.cs" />
+    <Compile Include="autogen\isteamunifiedmessages.cs" />
+    <Compile Include="autogen\isteamuser.cs" />
+    <Compile Include="autogen\isteamuserstats.cs" />
+    <Compile Include="autogen\isteamutils.cs" />
+    <Compile Include="autogen\isteamvideo.cs" />
+    <Compile Include="autogen\NativeMethods.cs" />
+    <Compile Include="autogen\SteamCallbacks.cs" />
+    <Compile Include="autogen\SteamConstants.cs" />
+    <Compile Include="autogen\SteamEnums.cs" />
+    <Compile Include="autogen\SteamStructs.cs" />
+    <Compile Include="CallbackDispatcher.cs" />
+    <Compile Include="CallbackIdentity.cs" />
+    <Compile Include="InteropHelp.cs" />
+    <Compile Include="ISteamMatchmakingResponses.cs" />
+    <Compile Include="Packsize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steam.cs" />
+    <Compile Include="types\MatchmakingTypes\gameserveritem_t.cs" />
+    <Compile Include="types\MatchmakingTypes\servernetadr_t.cs" />
+    <Compile Include="types\SteamClientPublic\CGameID.cs" />
+    <Compile Include="types\SteamClientPublic\CSteamID.cs" />
+    <Compile Include="types\SteamClientPublic\HAuthTicket.cs" />
+    <Compile Include="types\SteamClient\HSteamPipe.cs" />
+    <Compile Include="types\SteamClient\HSteamUser.cs" />
+    <Compile Include="types\SteamClient\SteamAPIWarningMessageHook_t.cs" />
+    <Compile Include="types\SteamClient\SteamAPI_CheckCallbackRegistered_t.cs" />
+    <Compile Include="types\SteamClient\SteamAPI_PostAPIResultInProcess_t.cs" />
+    <Compile Include="types\SteamFriends\FriendsGroupID_t.cs" />
+    <Compile Include="types\SteamHTMLSurface\HHTMLBrowser.cs" />
+    <Compile Include="types\SteamHTTP\HTTPCookieContainerHandle.cs" />
+    <Compile Include="types\SteamHTTP\HTTPRequestHandle.cs" />
+    <Compile Include="types\SteamInventory\SteamInventoryResult_t.cs" />
+    <Compile Include="types\SteamInventory\SteamItemDef_t.cs" />
+    <Compile Include="types\SteamInventory\SteamItemInstanceID_t.cs" />
+    <Compile Include="types\SteamMatchmaking\HServerListRequest.cs" />
+    <Compile Include="types\SteamMatchmaking\HServerQuery.cs" />
+    <Compile Include="types\SteamNetworking\SNetListenSocket_t.cs" />
+    <Compile Include="types\SteamNetworking\SNetSocket_t.cs" />
+    <Compile Include="types\SteamRemoteStorage\PublishedFileId_t.cs" />
+    <Compile Include="types\SteamRemoteStorage\PublishedFileUpdateHandle_t.cs" />
+    <Compile Include="types\SteamRemoteStorage\UGCFileWriteStreamHandle_t.cs" />
+    <Compile Include="types\SteamRemoteStorage\UGCHandle_t.cs" />
+    <Compile Include="types\SteamScreenshots\ScreenshotHandle.cs" />
+    <Compile Include="types\SteamTypes\AccountID_t.cs" />
+    <Compile Include="types\SteamTypes\AppId_t.cs" />
+    <Compile Include="types\SteamTypes\DepotId_t.cs" />
+    <Compile Include="types\SteamTypes\ManifestId_t.cs" />
+    <Compile Include="types\SteamTypes\SteamAPICall_t.cs" />
+    <Compile Include="types\SteamUGC\UGCQueryHandle_t.cs" />
+    <Compile Include="types\SteamUGC\UGCUpdateHandle_t.cs" />
+    <Compile Include="types\SteamUnifiedMessages\ClientUnifiedMessageHandle.cs" />
+    <Compile Include="types\SteamUserStats\SteamLeaderboardEntries_t.cs" />
+    <Compile Include="types\SteamUserStats\SteamLeaderboard_t.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="redist\steam_api.dll" />
+    <Content Include="redist\steam_api64.dll" />
+    <Content Include="redist\steam_appid.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
