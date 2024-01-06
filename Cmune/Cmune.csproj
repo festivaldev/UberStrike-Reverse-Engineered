@@ -76,6 +76,7 @@
     <Compile Include="DataCenter\Common\Entities\ClanView.cs" />
     <Compile Include="DataCenter\Common\Entities\ContactGroupOperationResult.cs" />
     <Compile Include="DataCenter\Common\Entities\ContactGroupView.cs" />
+    <Compile Include="DataCenter\Common\Entities\ContactRequestAcceptView.cs" />
     <Compile Include="DataCenter\Common\Entities\ContactRequestStatus.cs" />
     <Compile Include="DataCenter\Common\Entities\ContactRequestView.cs" />
     <Compile Include="DataCenter\Common\Entities\ConvertEntities.cs" />
@@ -147,6 +148,9 @@
     <Compile Include="DataCenter\Common\Entities\WeeklySpecialView.cs" />
     <Compile Include="DataCenter\Common\PrizeElementView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataCenter\Common\Entities\ContactRequestDeclineView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
