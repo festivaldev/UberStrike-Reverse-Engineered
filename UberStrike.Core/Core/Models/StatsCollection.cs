@@ -15,6 +15,10 @@ namespace UberStrike.Core.Models {
 		public int MeleeShotsFired { get; set; }
 		public int MeleeShotsHit { get; set; }
 		public int MeleeDamageDone { get; set; }
+		public int HandgunKills { get; set; }
+		public int HandgunShotsFired { get; set; }
+		public int HandgunShotsHit { get; set; }
+		public int HandgunDamageDone { get; set; }
 		public int MachineGunKills { get; set; }
 		public int MachineGunShotsFired { get; set; }
 		public int MachineGunShotsHit { get; set; }
