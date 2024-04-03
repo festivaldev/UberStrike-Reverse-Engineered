@@ -21,6 +21,8 @@ namespace UberStrike.Core.Serialization {
 				Int32Proxy.Serialize(memoryStream, instance.MostSplats);
 				Int32Proxy.Serialize(memoryStream, instance.MostSplattergunSplats);
 				Int32Proxy.Serialize(memoryStream, instance.MostXPEarned);
+
+				Int32Proxy.Serialize(memoryStream, instance.MostHandgunSplats);
 				memoryStream.WriteTo(stream);
 			}
 		}
@@ -42,7 +44,9 @@ namespace UberStrike.Core.Serialization {
 				MostSniperSplats = Int32Proxy.Deserialize(bytes),
 				MostSplats = Int32Proxy.Deserialize(bytes),
 				MostSplattergunSplats = Int32Proxy.Deserialize(bytes),
-				MostXPEarned = Int32Proxy.Deserialize(bytes)
+				MostXPEarned = Int32Proxy.Deserialize(bytes),
+
+				MostHandgunSplats = Int32Proxy.Deserialize(bytes)
 			};
 		}
 	}

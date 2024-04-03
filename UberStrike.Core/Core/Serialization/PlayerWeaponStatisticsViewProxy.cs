@@ -33,6 +33,11 @@ namespace UberStrike.Core.Serialization {
 				Int32Proxy.Serialize(memoryStream, instance.SplattergunTotalShotsFired);
 				Int32Proxy.Serialize(memoryStream, instance.SplattergunTotalShotsHit);
 				Int32Proxy.Serialize(memoryStream, instance.SplattergunTotalSplats);
+
+				Int32Proxy.Serialize(memoryStream, instance.HandgunTotalDamageDone);
+				Int32Proxy.Serialize(memoryStream, instance.HandgunTotalShotsFired);
+				Int32Proxy.Serialize(memoryStream, instance.HandgunTotalShotsHit);
+				Int32Proxy.Serialize(memoryStream, instance.HandgunTotalSplats);
 				memoryStream.WriteTo(stream);
 			}
 		}
@@ -66,7 +71,12 @@ namespace UberStrike.Core.Serialization {
 				SplattergunTotalDamageDone = Int32Proxy.Deserialize(bytes),
 				SplattergunTotalShotsFired = Int32Proxy.Deserialize(bytes),
 				SplattergunTotalShotsHit = Int32Proxy.Deserialize(bytes),
-				SplattergunTotalSplats = Int32Proxy.Deserialize(bytes)
+				SplattergunTotalSplats = Int32Proxy.Deserialize(bytes),
+
+				HandgunTotalDamageDone = Int32Proxy.Deserialize(bytes),
+				HandgunTotalShotsFired = Int32Proxy.Deserialize(bytes),
+				HandgunTotalShotsHit = Int32Proxy.Deserialize(bytes),
+				HandgunTotalSplats = Int32Proxy.Deserialize(bytes)
 			};
 		}
 	}
