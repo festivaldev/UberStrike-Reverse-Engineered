@@ -47,19 +47,19 @@ namespace UberStrike.Core.Models {
 		public int Points { get; set; }
 
 		public int GetKills() {
-			return MeleeKills + MachineGunKills + ShotgunSplats + SniperKills + SplattergunKills + CannonKills + LauncherKills - Suicides;
+			return MeleeKills + HandgunKills + MachineGunKills + ShotgunSplats + SniperKills + SplattergunKills + CannonKills + LauncherKills - Suicides;
 		}
 
 		public int GetShots() {
-			return MeleeShotsFired + MachineGunShotsFired + ShotgunShotsFired + SniperShotsFired + SplattergunShotsFired + CannonShotsFired + LauncherShotsFired;
+			return MeleeShotsFired + HandgunShotsFired + MachineGunShotsFired + ShotgunShotsFired + SniperShotsFired + SplattergunShotsFired + CannonShotsFired + LauncherShotsFired;
 		}
 
 		public int GetHits() {
-			return MeleeShotsHit + MachineGunShotsHit + ShotgunShotsHit + SniperShotsHit + SplattergunShotsHit + CannonShotsHit + LauncherShotsHit;
+			return MeleeShotsHit + HandgunShotsHit + MachineGunShotsHit + ShotgunShotsHit + SniperShotsHit + SplattergunShotsHit + CannonShotsHit + LauncherShotsHit;
 		}
 
 		public int GetDamageDealt() {
-			return MeleeDamageDone + MachineGunDamageDone + ShotgunDamageDone + SniperDamageDone + SplattergunDamageDone + CannonDamageDone + LauncherDamageDone;
+			return MeleeDamageDone + HandgunDamageDone + MachineGunDamageDone + ShotgunDamageDone + SniperDamageDone + SplattergunDamageDone + CannonDamageDone + LauncherDamageDone;
 		}
 	}
 }
