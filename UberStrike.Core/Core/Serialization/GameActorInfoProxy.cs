@@ -57,7 +57,8 @@ namespace UberStrike.Core.Serialization {
 				}
 
 				ByteProxy.Serialize(memoryStream, instance.Rank);
-				ColorProxy.Serialize(memoryStream, instance.SkinColor);
+				// Not trying to be racist here, that's what UberStrike wants ¯\_(ツ)_/¯
+				ColorProxy.Serialize(memoryStream, UnityEngine.Color.white);
 				EnumProxy<SurfaceType>.Serialize(memoryStream, instance.StepSound);
 				EnumProxy<TeamID>.Serialize(memoryStream, instance.TeamID);
 
