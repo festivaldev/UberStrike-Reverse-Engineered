@@ -68,7 +68,6 @@ namespace UberStrike.Core.Serialization.Legacy {
 				uberStrikeItemWeaponView = new UberStrikeItemWeaponView();
 				uberStrikeItemWeaponView.AccuracySpread = Int32Proxy.Deserialize(bytes);
 				if ((num & 1) != 0) {
-					Debug.Log(string.Format("AccuracySpread: {0}", uberStrikeItemWeaponView.AccuracySpread));
 					uberStrikeItemWeaponView.CustomProperties = DictionaryProxy<string, string>.Deserialize(bytes, new DictionaryProxy<string, string>.Deserializer<string>(StringProxy.Deserialize), new DictionaryProxy<string, string>.Deserializer<string>(StringProxy.Deserialize));
 				}
 				uberStrikeItemWeaponView.DamageKnockback = Int32Proxy.Deserialize(bytes);

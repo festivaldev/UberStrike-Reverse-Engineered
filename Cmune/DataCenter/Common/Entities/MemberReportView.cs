@@ -3,6 +3,7 @@
 namespace Cmune.DataCenter.Common.Entities {
 	[Serializable]
 	public class MemberReportView {
+		public int ReportId { get; set; }
 		public int SourceCmid { get; set; }
 		public int TargetCmid { get; set; }
 		public MemberReportType ReportType { get; set; }

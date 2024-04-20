@@ -7,7 +7,7 @@
     <ProjectGuid>{85137628-F019-48CD-BD0F-31FC81DDD7A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UberStrike.Core</RootNamespace>
+    <RootNamespace>UberStrike</RootNamespace>
     <AssemblyName>UberStrike.Core</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

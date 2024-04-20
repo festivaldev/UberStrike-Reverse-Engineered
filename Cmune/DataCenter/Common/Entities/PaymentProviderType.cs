@@ -15,6 +15,7 @@
 		iOS,
 		CherryCredits,
 		GoogleWallet,
-		Steam
+		Steam,
+		PayPal
 	}
 }
