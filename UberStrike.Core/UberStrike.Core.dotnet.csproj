@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+	<RootNamespace>UberStrike</RootNamespace>
+    <AssemblyName>UberStrike.Core</AssemblyName>
+	<OutputPath>bin\$(Configuration)</OutputPath>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<GenerateSupportedRuntime>False</GenerateSupportedRuntime>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+	<DebugSymbols>False</DebugSymbols>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowedReferenceRelatedFileExtensions>
+      <!-- Prevent default XML and PDB files copied to output in RELEASE.
+           Only *.allowedextension files will be included, which doesn't exist in my case.
+      -->
+      .allowedextension
+	</AllowedReferenceRelatedFileExtensions>
+    <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=C:\buildroot\$(MSBuildProjectName)</PathMap>
+	<GenerateDocumentationFile>False</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>..\AssemblyReferences\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\Cmune\Cmune.dotnet.csproj" />
+	<ProjectReference Include="..\UberStrike.Core.Types\UberStrike.Core.Types.dotnet.csproj" />
+    <ProjectReference Include="..\UberStrike.DataCenter.Common\UberStrike.DataCenter.Common.dotnet.csproj" />
+  </ItemGroup>
+
+</Project>
