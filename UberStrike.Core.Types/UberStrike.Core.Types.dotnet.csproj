@@ -1,18 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net35</TargetFramework>
-	<RootNamespace>UberStrike.Core.Types</RootNamespace>
+    <RootNamespace>UberStrike.Core.Types</RootNamespace>
     <AssemblyName>UberStrike.Core.Types</AssemblyName>
-	<OutputPath>bin\$(Configuration)</OutputPath>
-	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<GenerateSupportedRuntime>False</GenerateSupportedRuntime>
-	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateSupportedRuntime>False</GenerateSupportedRuntime>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugType>none</DebugType>
-	<DebugSymbols>False</DebugSymbols>
+    <DebugSymbols>False</DebugSymbols>
     <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -22,13 +21,14 @@
            Only *.allowedextension files will be included, which doesn't exist in my case.
       -->
       .allowedextension
-	</AllowedReferenceRelatedFileExtensions>
-    <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=C:\buildroot\$(MSBuildProjectName)</PathMap>
-	<GenerateDocumentationFile>False</GenerateDocumentationFile>
+    </AllowedReferenceRelatedFileExtensions>
+    <PathMap>
+      $([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=C:\buildroot\$(MSBuildProjectName)
+    </PathMap>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\Cmune\Cmune.dotnet.csproj" />
+    <ProjectReference Include="..\Cmune\Cmune.dotnet.csproj" />
   </ItemGroup>
-
 </Project>
